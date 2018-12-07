@@ -1,0 +1,16 @@
+/* pages/map/map.wxss */
+.btn {
+  color: #FFFFFF;
+  background-color:#3b2e7e;
+}
+.msg {
+  color: #FFFFFF;
+}
+.container {
+  position:fixed;
+  width:100%;
+  height:100%;
+  background-size:cover;
+  background-image: url('http://img2.imgtn.bdimg.com/it/u=4075096188,2822998080&fm=26&gp=0.jpg');
+  background-repeat:no-repeat; 
+}

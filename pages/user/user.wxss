@@ -1,0 +1,9 @@
+/* pages/user/user.wxss */
+.container {
+  position:fixed;
+  width:100%;
+  height:100%;
+  background-size:cover;
+  background-image: url('http://img1.imgtn.bdimg.com/it/u=1749692997,2983050632&fm=26&gp=0.jpg');
+  background-repeat:no-repeat; 
+}

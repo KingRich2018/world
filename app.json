@@ -1,48 +1,54 @@
 {
-  "pages":[
-    
+  "pages": [
     "pages/index/index",
     "pages/news/news",
     "pages/video/video",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/map/map",
+    "pages/user/user"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3b2e7e",
+    "navigationBarTitleText": "世界之大",
+    "navigationBarTextStyle": "#000000"
   },
   "tabBar": {
     "borderStyle": "#FFF",
     "backgroundColor": "#FFF",
     "color": "#000",
-    "selectedColor": "blue",
+    "selectedColor": "#3b2e7e",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/news/news",
         "text": "推荐",
-        "iconPath": "img/icon_mflq.png",
-        "selectedIconPath": "img/logo.jpg"
+        "iconPath": "img/icon_recommend.png",
+        "selectedIconPath": "img/icon_recommendY.png"
       },
       {
-        "pagePath": "pages/news/news",
-        "text": "热点",
-        "iconPath": "img/icon_mflq.png",
-        "selectedIconPath": "img/logo.jpg"
+        "pagePath": "pages/logs/logs",
+        "text": "日志",
+        "iconPath": "img/icon_hotspot.png",
+        "selectedIconPath": "img/icon_hotspotY.png"
+      },
+      {
+        "pagePath": "pages/map/map",
+        "text": "地图",
+        "iconPath": "img/icon_map.png",
+        "selectedIconPath": "img/icon_mapY.png"
       },
       {
         "pagePath": "pages/video/video",
         "text": "视频",
-        "iconPath": "img/icon_mflq.png",
-        "selectedIconPath": "img/logo.jpg"
+        "iconPath": "img/icon_video.png",
+        "selectedIconPath": "img/icon_videoY.png"
       },
       {
-        "pagePath": "pages/news/news",
+        "pagePath": "pages/user/user",
         "text": "我",
-        "iconPath": "img/icon_mflq.png",
-        "selectedIconPath": "img/logo.jpg"
+        "iconPath": "img/icon_user.png",
+        "selectedIconPath": "img/icon_userY.png"
       }
     ]
   }
-
 }
