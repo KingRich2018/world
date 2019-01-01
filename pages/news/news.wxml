@@ -1,3 +1,28 @@
-<view class='container'>
-
+<view>
+  <image class="cloud" src="{{z}}" style="width:{{windowWidth+200}}px;height:{{windowHeight}}px;margin-left:-100px;">
+  </image>
 </view>
+<view class="modalDlg" catchtouchmove="preventTouchMove">
+</view>
+<view class='modelarea' style='height:{{windowHeight*0.65}}px;' catchtouchmove="ture">
+  <view wx:if="{{!isContent}}" bindtap="content" data-content="{{true}}" >
+    <view class="modelone" style="overflow-x:hidden;width:calc({{windowWidth*0.8}}px);">
+      <image animation="{{animationCloudData}}" class="cloud" src="{{z}}" style="width:calc({{windowWidth*0.8+200}}px);height:{{windowHeight*0.65*0.8}}px;margin-left:-100px;" >
+      </image>
+    </view>
+  <button class="summary">{{yy}}. . .</button>
+</view>
+<view bindtap="content" wx:if="{{isContent}}" data-content="{{false}}">
+  <view class="head">
+    <text class="txtHead">总有一句让你记忆</text>
+    <button class="shareBtn" open-type="share"><image  class="share" src="../../img/share_icon.png"></image></button>
+  </view>
+  <view class="clear"></view>
+  <view class="body" style="height:{{windowHeight*0.65-70}}px;">
+  <view class="content">
+    <text>{{y}}
+    </text>
+  </view>
+  </view>
+    </view>
+</view>  

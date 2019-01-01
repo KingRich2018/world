@@ -1,0 +1,19 @@
+/* pages/express/express.wxss */
+.search{
+  margin: 20px auto;
+  width: 70%;
+  height: 60px;
+  background: yellow;
+}
+ input{
+   background: #FFF url(https://cdn-img.easyicon.net/png/11390/1139043.gif) no-repeat 8px 6px;
+	width: 50%;
+	height: 33px;
+  padding-left: 35px; 
+  border-bottom: 1px solid red;
+  font-size:14px;
+	background-size: 20px 20px;
+ }
+.searchbox{
+  margin-top:10px;
+}

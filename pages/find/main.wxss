@@ -1,0 +1,73 @@
+.main{
+  width: 100%;
+  background: #FeF;
+}
+.mainTop{
+  width: 100%;
+  height: 33%;
+  background: yellow;
+}
+.small{
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+.big{
+  display: block;
+  width: 65px;
+  height: 65px;
+}
+
+.tools{
+  height: 180px;
+  margin: -30px 15px 0 15px;
+  margin-top:-30px;
+  background: #FFF ;
+  border-radius: 10px;
+}
+
+.tool{
+  width: 40px;
+  height: 40px;
+}
+.toolText{
+  display: block;
+  font-size: 10px;
+  margin-left:0px; 
+}
+.toolView{
+  margin-top:20px;
+  width: 40px;
+  float: left;
+}
+.shareArea{
+  height: 100px;
+  margin: -30px 15px 0 15px;
+  margin-top:15px;
+  background: #FFF ;
+  border-radius: 10px;
+}
+.shareView{
+  width: 40px;
+}
+.shareImg{
+  margin-top:20px;
+  margin-left:-15px;
+  width: 40px;
+  height: 40px;
+}
+.shareText{
+  display: block;
+  font-size: 10px;
+  margin-left:0px;
+}
+.shareBtn{
+border:none;
+height: 60px;
+background-color:#FFF;
+}
+.shareBtn:after{
+border:none;  
+}
+
+

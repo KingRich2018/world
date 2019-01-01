@@ -1,0 +1,9 @@
+<!--pages/express/express.wxml-->
+<view id="container">
+
+ <view class="search">
+        <form bindsubmit="comment_submit">
+            <input type="text" placeholder="请输入快递单号. . ."  cursor-spacing='10' bindconfirm="comment_submit" class="searchbox"  confirm-type='查询'/>
+        </form>
+ </view>
+</view>

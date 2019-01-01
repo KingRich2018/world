@@ -5,49 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-    map:{
-      latitude: 34.75381,
-      longitude: 113.67739
-    },
-    mark:{
-      latitude: '',
-      longitude: '',
-      address:''
-    }
+    windowWidth: wx.getSystemInfoSync().windowWidth,
+    windowHeight: wx.getSystemInfoSync().windowHeight,
   },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    var myThis = this
-    wx.getLocation({
-      type: 'wgs84',
-      success: (res) => {
-        myThis.setData({
-          'map.latitude': res.latitude,
-          'map.longitude': res.longitude
-        })
-      }
-    })
+  onLoad: function () {
+    var that = this
+    
   },
-    /**
-   * 点击地图添加Mark点
-   */
-  clickMap: function(){
-    var myThis = this
-    wx.chooseLocation({
-      success: function (res) {
-        myThis.setData({
-          'mark.latitude': res.latitude,
-          'mark.longitude': res.longitude,
-          'mark.address': res.address
-        })
-        console.log(myThis.data.mark)
-      },
-      fail: function (err) {
-        console.log(err)
-      }
-    })
+  onShow: function () {
+    var that = this
+    
   },
     /**
    * 生命周期函数--监听页面初次渲染完成
@@ -100,7 +70,19 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-  
-  }
+  onShareAppMessage: function (ops) {
+    if (ops.from === 'button') {
+      // 来自页面内转发按钮
+    }
+    return {
+      title: this.data.title,
+      path: '/pages/find/main',
+      success: function (res) {
+        // 转发成功
+      },
+      fail: function (res) {
+        // 转发失败
+      }
+    }
+  },
 })
