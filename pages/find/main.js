@@ -38,7 +38,21 @@ Page({
   onShow: function () {
   
   },
-
+  histroy:function(){
+    wx.navigateTo({
+      url: 'histroy'
+    })
+  },
+  travel: function () {
+    wx.navigateTo({
+      url: 'travel'
+    })
+  },
+  foods: function () {
+    wx.navigateTo({
+      url: 'foods'
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

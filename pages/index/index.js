@@ -1,7 +1,6 @@
 //index.js
 //获取应用实例
-const app = getApp()
-
+var app = getApp()
 Page({
   data: {
     motto: '世界之大欢迎您！',

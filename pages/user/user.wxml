@@ -1,5 +1,29 @@
-<!--pages/user/user.wxml-->
-
-<view class='container'>
+<view class="mainTop">
  
+</view>
+<view class="userInfo">
+
+  <view class="user">
+   
+    <image  src="{{userInfo.avatarUrl==''?'../../img/head_icon.png':userInfo.avatarUrl}}" class="avatarUrl" style="margin-left:calc(({{windowWidth}}px - 90px)/2)"></image>
+     <button class="btn" wx:if="{{bind}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"></button>
+    <text class="nickName">{{userInfo.nickName==''?'点击头像登录':userInfo.nickName}}</text>
+    </view>
+    <view class="tools">
+
+    <view class="toolView"  mode="aspectFill" style="margin-left:calc(({{windowWidth}}px - 150px)/4)" bindtap="getContent" data-flag="1">
+  <image class="{{flag==1?'bigTool':'tool'}}" src="../../img/collection_icon.png"  />
+ <text class="{{flag==1?'bigToolText':'toolText'}}">收藏文章</text>
+  </view>
+  <view class="toolView"  mode="aspectFill" style="margin-left:calc(({{windowWidth}}px - 150px)/4)" bindtap="getContent" data-flag="2">
+  <image class="{{flag==2?'bigTool':'tool'}}" src="../../img/collection_icon.png"  />
+ <text class="{{flag==2?'bigToolText':'toolText'}}">收藏文章</text>
+  </view>
+
+  <view class="toolView"  mode="aspectFill" style="margin-left:calc(({{windowWidth}}px - 150px)/4)" bindtap="getContent" data-flag="3">
+  <image class="{{flag==3?'bigTool':'tool'}}" src="../../img/collection_icon.png"  />
+ <text class="{{flag==3?'bigToolText':'toolText'}}">好文收藏</text>
+  </view>
+
+  </view>
 </view>

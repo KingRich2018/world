@@ -1,4 +1,7 @@
 <view>
+<!-- ,
+    "navigationStyle":"custom"-->
+
   <image class="cloud" src="{{z}}" style="width:{{windowWidth+200}}px;height:{{windowHeight}}px;margin-left:-100px;">
   </image>
 </view>
@@ -20,7 +23,7 @@
   <view class="clear"></view>
   <view class="body" style="height:{{windowHeight*0.65-70}}px;">
   <view class="content">
-    <text>{{y}}
+    <text style="width:100%;">{{y}}
     </text>
   </view>
   </view>

@@ -25,7 +25,6 @@ border:none;
   background-color:#FFF;
   opacity: 0.8;
   top: 0%;
- 
 }
 .modelone{
   border-top-left-radius:10px;
@@ -40,7 +39,7 @@ border:none;
   background-color: #FFF;
   border-radius: 10px;
   overflow: hidden;
-  top: 15%;
+  top: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -86,7 +85,6 @@ border:none;
 }
 .clear{
   clear:both;
- 
 }
 .body{
   opacity: 0.5;

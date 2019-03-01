@@ -1,21 +1,31 @@
 {
   "pages": [
-    "pages/find/main",
     "pages/news/news",
+    "pages/find/foods",
+    
+    "pages/find/travel",
+    "pages/read/read",
+    "pages/user/user",
+    "pages/find/histroy",
+    "pages/find/main",
+    "pages/find/today",
     "pages/index/index",
+    "pages/plan/plan",
     "pages/express/express",
-    "pages/video/video",
-    "pages/logs/logs",
-    
-    "pages/user/user"
-    
+    "pages/read/one",
+    "pages/find/tour",
+    "pages/find/food"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#FFD700",
     "navigationBarTitleText": "世界之大",
-    "navigationBarTextStyle": "#000000",
-    "navigationStyle":"custom"
+    "navigationBarTextStyle": "#000000"
   },
   "tabBar": {
     "borderStyle": "gray",
@@ -28,10 +38,9 @@
         "text": "首页",
         "iconPath": "img/first_no_icon.png",
         "selectedIconPath": "img/first_yes_icon.png"
-        
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/plan/plan",
         "text": "计划",
         "iconPath": "img/yuan_no_icon.png",
         "selectedIconPath": "img/yuan_yes_icon.png"
@@ -43,14 +52,12 @@
         "selectedIconPath": "img/find_yes_icon.png",
         "hegiht": "100px"
       },
-    
       {
-        "pagePath": "pages/video/video",
-        "text": "资讯",
-        "iconPath": "img/new_no_icon.png",
-        "selectedIconPath": "img/new_yes_icon.png"
+        "pagePath": "pages/read/read",
+        "text": "阅读",
+        "iconPath": "img/read_no_icon.png",
+        "selectedIconPath": "img/read_yes_icon.png"
       },
-    
       {
         "pagePath": "pages/user/user",
         "text": "我的",

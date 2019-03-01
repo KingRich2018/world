@@ -12,17 +12,25 @@
   <image class="tool" src="../../img/express_icon.png"  />
  <text class="toolText">快递查询</text>
   </view>
-  <view class="toolView"  mode="aspectFill" style="margin-left:calc(({{windowWidth}}px - 40px*4-30px)/6)">
+  <view class="toolView" bindtap="histroy"  mode="aspectFill" style="margin-left:calc(({{windowWidth}}px - 40px*4-30px)/6)">
   <image class="tool" src="../../img/histroy_icon.png"  />
- <text class="toolText">今天历史</text>
+ <text class="toolText">历史今天</text>
   </view>
   <view class="toolView"  mode="aspectFill" style="margin-left:calc(({{windowWidth}}px - 40px*4-30px)/6)">
   <image class="tool" src="../../img/bus_icon.png"  />
  <text class="toolText">实时公交</text>
   </view>
+  <view class="toolView" bindtap="travel"  mode="aspectFill" style="margin-left:calc(({{windowWidth}}px - 40px*4-30px)/6)">
+  <image class="tool" src="../../img/lvyou_icon.png"  />
+ <text class="toolText">旅游攻略</text>
+  </view>
+  <view class="toolView" bindtap="foods"  mode="aspectFill" style="margin-left:calc(({{windowWidth}}px - 40px*4-30px)/6)">
+  <image class="tool" src="../../img/foot_icon.png"  />
+ <text class="toolText">美食分享</text>
+  </view>
   <view class="toolView"  mode="aspectFill"  style="margin-left:calc(({{windowWidth}}px - 40px*4-30px)/6)">
   <image class="tool" src="../../img/question_icon.png"  />
- <text class="toolText">待我想想</text>
+ <text class="toolText">提提意见</text>
   </view>
 </view>
 <view class="shareArea">
