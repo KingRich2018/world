@@ -1,0 +1,31 @@
+<view class="list">
+<block wx:for="{{travels}}" wx:key="key" wx:for-item="item" >
+  <view class="article" wx:if="{{item.cover!=''}}">
+  <!-- 
+    <view class="img">
+      <image class="image" src="{{item.cover}}" />
+    </view>
+    -->
+    <view class="info" bindtap='lookTravel' data-id="{{item.id}}">
+      <text class="title">{{item.title}}</text>
+      <text class="abstrace">{{item.abstra}}</text>
+      <view>
+        <text class="name">{{item.name}}</text>
+        <text class="time">{{item.time}}</text>
+      </view>
+    </view>
+    <view class="clear"></view>
+  </view>
+
+
+
+<view class="hr1"></view>
+  </block>
+
+
+</view>
+
+<view class="loadmore" hidden='{{hiddenloading}}'>
+  <view class="loading"></view>
+  <view class="loadmore__tips">正在加载</view>
+</view>

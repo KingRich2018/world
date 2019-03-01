@@ -1,0 +1,13 @@
+<block wx:for="{{foods}}" wx:key="key" wx:for-item="item" >
+<view class="main">
+  <view class="leftView">
+    <view bindtap='lookFood' data-id="{{item.id}}">
+    <image class="leftImg" src="{{item.cover}}"></image>
+    <text class="title">{{item.title}}</text>
+    </view>
+    <text class="name">{{item.name}}</text>
+    <image class="like" src="../../img/xin_no_icon.png"></image>
+  </view>
+</view>
+</block>
+<view class="viewBottom"></view>

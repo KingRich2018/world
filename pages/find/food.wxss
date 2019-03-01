@@ -1,0 +1,23 @@
+.mainTop{
+  margin:10px 15px;
+}
+.swiper{
+background-color:#FFF;
+opacity: 1;
+width: 100%;
+height: 240px;   
+z-index:50;
+}
+.title{
+  margin: 5px 15px;
+  font-size: 22px;
+  font-weight: 700;
+}
+.viewBottom{
+  height: 20px;
+}
+.content{
+  margin: 20px 15px;
+  font-size: 18px;
+  line-height: 50px;
+}

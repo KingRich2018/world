@@ -1,0 +1,6 @@
+<import src="../../wxParse/wxParse.wxml"/> 
+<!--详情-->
+    <view class="content">
+      <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+    </view>
+    <view style="height:30px;"></view>

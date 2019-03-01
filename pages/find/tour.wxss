@@ -1,0 +1,10 @@
+@import "../../wxParse/wxParse.wxss";
+.content{
+  margin: 0 15px;
+}
+.title{
+  font-size: 22px;
+  margin: 10px 15px;
+  font-weight: 900;
+   
+}

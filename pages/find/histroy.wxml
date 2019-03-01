@@ -1,0 +1,82 @@
+<view>
+  <view class="timeview">
+        
+    <view class="top">
+      <image class="topImg" src="../../img/histroy_icon.png"></image>
+
+      
+     <view class="topLine"></view>
+    
+    </view>
+    <view class="main" >
+     <block wx:for="{{todayHistory.todayHistory}}" wx:key="key" wx:for-item="item" >
+     
+    <view class="single {{index!=todayHistory.todayHistory.length-1?'':'bott'}}" bindtap="getContent" wx:if="{{item.imgUrl!=''}}" data-id="{{item.id}}">
+      <view class="content" >
+        <image class="hisImg" src="{{item.imgUrl}}"></image>
+        <text class="title">{{item.title}}</text>
+      </view>
+      <view class="detail">
+        <view class="viewLeft">
+        </view>
+        <view class="viewTime">
+          <text class="timeaxis">{{item.time}}</text>
+        </view>
+        <view class="line" wx:if="{{index!=todayHistory.todayHistory.length-1}}"></view>
+      </view>
+    </view>
+    
+
+    <view class="singleRight {{index!=todayHistory.todayHistory.length-1?'':'bott'}}" bindtap="getContent" wx:if="{{item.imgUrl==''}}" data-id="{{item.id}}">
+      <view class="detail">
+      <view class="viewRight">
+        </view>
+        <view class="viewAxis">
+          <text class="axis">{{item.time}}</text>
+        </view>
+        <view class="lineRight" wx:if="{{index!=todayHistory.todayHistory.length-1}}"></view>
+      </view>
+      
+      <view class="content1">
+       <text class="title2">{{item.title}}
+        </text>
+      </view>
+    </view>
+</block>
+
+  </view>
+ 
+</view>
+</view>
+
+<view class="modalDlg" catchtouchmove="preventTouchMove" wx:if="{{show}}">
+</view>
+<view class="clear"></view>
+
+<view class="date" wx:if="{{show}}">
+  <view class="month">
+    <text class="textSel">-请选择月份-</text>
+      <view>
+        <block wx:for="{{months}}" wx:key="key" wx:for-item="item">
+          <text class="textMonth"  bindtap="selectMonth" data-month="{{index}}" style="margin-left:calc(({{windowWidth}}px - 216px)/7);color:{{index==month?'red':'#000'}}">{{item}}</text>
+        </block>
+      </view>
+  </view>
+  <view class="clear"></view>
+   <view class="day">
+    <text class="textSel">-请选择日期-</text>
+      <view>
+        <block wx:for="{{days}}" wx:key="key" wx:for-item="item">
+          <text class="textDay"  bindtap="selectDay" data-day="{{index}}" data-month="{{month}}" style="margin-left:calc(({{windowWidth}}px - 210px)/8);color:{{index==day  && selecting?'red':'#000'}}">{{item}}</text>
+        </block>
+      </view>
+  </view>
+</view>
+
+
+<view class="footer" bindtap="isShow" data-show="{{show}}">
+<view class="calendar">
+  <image class="timeTmg" src="../../img/calendar_icon.png"></image>
+  <text class="time">{{date}}</text>
+  </view>
+</view>

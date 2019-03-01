@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "散散心灵",
+  "backgroundTextStyle": "drak",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 100
+}

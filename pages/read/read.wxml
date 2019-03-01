@@ -1,0 +1,56 @@
+<!-- 
+<view class="top">
+</view>
+
+<view class="mainTop">
+  <swiper class='swiper' indicator-dots="true" autoplay="true" interval="2000" duration="1000" indicator-color="#979899" indicator-active-color='white'>
+    <swiper-item>
+      <image src="../../img/bus_icon.png" style="width:100%;" mode="widthFix" bindtap="swipclick" />
+
+    </swiper-item>
+    <swiper-item>
+      <image src="../../img/bus_icon.png" style="width:100%;" mode="widthFix" bindtap="swipclick" />
+    </swiper-item>
+    <swiper-item>
+      <image src="../../img/bus_icon.png" style="width:100%;" mode="widthFix" bindtap="swipclick" />
+    </swiper-item>
+  </swiper>
+</view>
+-->
+<view class="list">
+<block wx:for="{{reads}}" wx:key="key" wx:for-item="item" >
+  <view class="article" wx:if="{{item.cover!=''}}">
+    <view class="info" bindtap='lookRead' data-id="{{item.id}}">
+      <text class="title">{{item.title}}</text>
+      <text class="abstrace">{{item.abstra}}</text>
+      <view>
+        <text class="name">{{item.name}}</text>
+        <text class="time">{{item.time}}</text>
+      </view>
+    </view>
+    <view class="img">
+      <image class="image" src="{{item.cover}}" />
+    </view>
+    <view class="clear"></view>
+  </view>
+
+
+  <view class="article" wx:if="{{item.cover==''}}" bindtap='lookRead' data-id="{{item.id}}">
+    <text class="title">{{item.title}}</text>
+    <text class="abstrace">{{item.abstra}}</text>
+    <view>
+      <text class="name">{{item.name}}</text>
+        <text class="time">{{item.time}}</text>
+    </view>
+    
+  </view>
+<view class="hr1"></view>
+  </block>
+
+
+</view>
+
+<view class="loadmore" hidden='{{hiddenloading}}'>
+  <view class="loading"></view>
+  <view class="loadmore__tips">正在加载</view>
+</view>

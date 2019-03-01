@@ -1,0 +1,21 @@
+//logs.js
+const util = require('../../utils/util.js')
+
+Page({
+  data: {
+    showModal:false,
+  },
+  onLoad: function () {
+    
+  },
+  open:function(){
+    this.setData({
+      showModal: true,
+    })
+  },
+  showOpen:function(){
+    this.setData({
+      showModal: false,
+    })
+  }
+})

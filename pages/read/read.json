@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "悦上心灵",
+  "backgroundTextStyle": "drak",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 100
+}
