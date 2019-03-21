@@ -4,12 +4,12 @@
 <view class="modalDlg" catchtouchmove="preventTouchMove" wx:if="{{showModal}}" bindtap="showOpen">
 </view>
 <view class="openCont" wx:if="{{showModal}}">
-  <view>
+  <view bindtap='addPlan'>
     <image class="plan" src="../../img/add_icon.png"></image>
     <text class="textPlan">添加计划</text>
   </view>
   <view class="clear"></view>
-  <view>
+  <view >
     <image class="plan" src="../../img/plan_icon.png"></image>
     <text class="textPlan">我的计划</text>
   </view>
@@ -19,8 +19,10 @@
     <text class="textPlan">计划消息</text>
   </view>
 </view>
+
 <view class="noData">
 <image class="noDataImg" src="../../img/noData_icon.png"></image>
 <text class="textnoData">计划空空如也，赶快去添加吧！</text>
 </view>
+
 

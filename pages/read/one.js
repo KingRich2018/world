@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    lastTapTime:0
   },
 
   /**
@@ -41,7 +41,37 @@ Page({
 
 
   },
+  //触摸事件
+  mytap:function(e){
+    var curTime = e.timeStamp;
+    var lastTime = this.data.lastTapTime;
+    if (lastTime > 0){
+      //大于300毫秒，认为是双击
+      if(curTime - lastTime < 300){
+        wx.showModal({
+          title: '提示',
+          content: '是否收藏',
+          success: function (res) {
+            if (res.confirm) {
+              console.log('弹框后点取消')
+            } else {
+              console.log('弹框后点取消')
+            }
+          }
+   
+        })
 
+      
+      }else{
+
+      }
+    }else{
+
+    }
+    this.setData({
+      lastTapTime: curTime
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

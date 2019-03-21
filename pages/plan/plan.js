@@ -8,6 +8,11 @@ Page({
   onLoad: function () {
     
   },
+  addPlan:function(){
+    wx.navigateTo({
+      url: 'addPlan'
+    })
+  },
   open:function(){
     this.setData({
       showModal: true,

@@ -1,6 +1,6 @@
 <import src="../../wxParse/wxParse.wxml"/> 
 <!--详情-->
-    <view class="content">
+    <view class="content" bindtap='mytap'>
       <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
     </view>
     <view style="height:30px;"></view>

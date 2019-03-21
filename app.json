@@ -2,7 +2,6 @@
   "pages": [
     "pages/news/news",
     "pages/find/foods",
-    
     "pages/find/travel",
     "pages/read/read",
     "pages/user/user",
@@ -14,7 +13,8 @@
     "pages/express/express",
     "pages/read/one",
     "pages/find/tour",
-    "pages/find/food"
+    "pages/find/food",
+    "pages/plan/addPlan"
   ],
   "permission": {
     "scope.userLocation": {
@@ -30,8 +30,8 @@
   "tabBar": {
     "borderStyle": "gray",
     "backgroundColor": "#FFF",
-    "color": "#DDD",
-    "selectedColor": "#666",
+    "color": "#000",
+    "selectedColor": "#FFD700",
     "list": [
       {
         "pagePath": "pages/news/news",
