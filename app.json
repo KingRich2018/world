@@ -1,5 +1,7 @@
 {
   "pages": [
+    
+    
     "pages/news/news",
     "pages/find/foods",
     "pages/find/travel",
@@ -23,7 +25,7 @@
   },
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#FFD700",
+    "navigationBarBackgroundColor": "#FFC125",
     "navigationBarTitleText": "世界之大",
     "navigationBarTextStyle": "#000000"
   },
@@ -31,7 +33,7 @@
     "borderStyle": "gray",
     "backgroundColor": "#FFF",
     "color": "#000",
-    "selectedColor": "#FFD700",
+    "selectedColor": "#FFC125",
     "list": [
       {
         "pagePath": "pages/news/news",

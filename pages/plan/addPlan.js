@@ -6,7 +6,8 @@ Page({
    */
   data: {
     startDates: "",
-    endDates:""
+    endDates:"",
+    inputList:[1]
   },
 
   /**
@@ -33,6 +34,32 @@ Page({
       day = '0' + day;
     }
     return month + "-" + day;
+  },
+  addStep:function(e){
+    var that =this
+    var id = e.currentTarget.dataset['id']+1;
+    var inputList = that.data.inputList.concat(id);
+    that.setData({
+      inputList: inputList
+    })
+  },
+  detStep:function(e){
+    var id = e.currentTarget.dataset['detid'];
+    console.log(id)
+    var that = this
+    var inputList = that.data.inputList;
+    console.log(inputList)
+    inputList.splice(id-1, 1)
+    console.log(inputList)
+    console.log("长" + inputList.length)
+    for (var i = id-1; i < inputList.length;i++){
+      inputList[i] = inputList[i]-1;
+    }
+    console.log(inputList)
+    that.setData({
+      inputList: inputList
+    })
+
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

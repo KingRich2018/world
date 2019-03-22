@@ -33,7 +33,6 @@ Page({
   onPullDownRefresh: function () {
     var that = this
     that.readList(wx.getStorageSync("maxId"), 'pullList')
-    console.log(2222222222222222)
     setTimeout(function () {
       wx.stopPullDownRefresh()
     }, 1000)

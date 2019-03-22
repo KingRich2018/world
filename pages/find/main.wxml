@@ -1,7 +1,9 @@
 <view class="main" style="height:{{windowHeight+62}}px;" catchtouchmove="ture">
 <view class="mainTop">
+<!-- 
   <image class="small" src="../../img/big_radius_icon.png"></image>
    <image class="big" src="../../img/big_radius_icon.png"></image>
+   -->
 </view>
 <view class="tools">
   <view class="toolView"  mode="aspectFill" style="margin-left:calc(({{windowWidth}}px - 40px*4-30px)/6)">

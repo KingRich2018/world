@@ -4,18 +4,22 @@
 <view class="form">
   <form>
     <input class="title" name="title" placeholder="  请输入计划名称" /> 
-    <input class="step" name="step" placeholder="强迫下自己" />
+    <block wx:for="{{inputList}}" wx:key="key" wx:for-item="item">
+    <input class="step" name="step" placeholder="制定步骤，第{{index+1}}步{{item}}" /><image class="open" src="../../img/down_icon.png" bindtap="addStep" wx:if="{{inputList.length-1 == index}}" data-id="{{item}}" />
+    <image class="open" src="../../img/detele_icon.png" bindtap="detStep" wx:if="{{inputList.length-1 != index}}" data-detid="{{item}}" />
+    </block>
+    
     <view class="startTime">
       <text class="startTimeText">开始时间</text>
       <view class="section">  
         <picker mode="date" value="{{date}}" start="2018-01-01"  bindchange="bindDateChange">  
           <view class="picker">  
-            <input class="startTimeInput" disabled="disabled"  value='{{startDates}}'></input> 
+            <input class="startTimeInput" disabled="disabled"  value='{{startDates}}'></input>
           </view>  
           </picker>  
         </view> 
       </view>
-
+      <view class="hr"></view>
       <view class="endTime">
       <text class="endTimeText">结束时间</text>
       <view class="section">  
@@ -26,6 +30,6 @@
           </picker>  
         </view> 
       </view>
-
+      <button class="btn">完成</button>
   </form>
 </view>
