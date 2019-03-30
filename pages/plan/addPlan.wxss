@@ -32,6 +32,11 @@
   width: 10%;
   float: right;
 }
+.select{
+  width: 10%;
+  height: 30px;
+  background-color: red;
+}
 .startTimeText{
   font-size: 18px;
   font-weight: 600;
@@ -66,6 +71,7 @@
   height: 2rpx;
   background: #ebedec;
 }
+
 .btn{
   clear:both;
   margin-top: 80px;
@@ -74,4 +80,41 @@
   font-size: 18px;
   padding-top: 7px;
 }
-
+.head {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	float: left;
+  margin-top: 5px;
+}
+.personal{
+	margin-left: 3%;
+	margin-bottom: 5%;
+	float: left;
+	width: 80%;
+}
+.name {
+	font-weight: bold;
+	font-size: 15px;
+}
+.huifu {
+	font-size: 12px;
+	color: gray;
+	text-decoration: none;
+	display: block;
+}
+.commentList{
+  padding-top:5px;
+  clear: both;
+  margin:20px 20px; 
+}
+.whoCom{
+  padding-top:15px;
+   clear: both;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  font-size: 16px;
+  font-weight: 700;
+}

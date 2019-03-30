@@ -10,7 +10,7 @@ Page({
   },
   addPlan:function(){
     wx.navigateTo({
-      url: 'addPlan'
+      url: 'addPlan?flag=insert'
     })
   },
   open:function(){
@@ -21,6 +21,11 @@ Page({
   showOpen:function(){
     this.setData({
       showModal: false,
+    })
+  },
+  punch:function(){
+    wx.navigateTo({
+      url: 'addPlan?flag=update'
     })
   }
 })

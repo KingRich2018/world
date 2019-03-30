@@ -1,3 +1,4 @@
+
 <view>
   <image class="open" src="../../img/open_icon.png" bindtap="open" />
 </view>
@@ -20,9 +21,47 @@
   </view>
 </view>
 
-<view class="noData">
+<view class="noData" wx:if="{{false}}">
 <image class="noDataImg" src="../../img/noData_icon.png"></image>
 <text class="textnoData">计划空空如也，赶快去添加吧！</text>
+</view>
+<!--计划列表 -->
+<view>
+  <view class="main" bindtap='punch' style="background-color: #00EEEE;">
+    <image class="flag" src="../../img/flag_icon.png"></image>
+    <text class="title">先挣一个亿</text>
+    <text class="startTime">2018-12-11</text>
+    <text class="dao">到</text>
+    <text class="endTime">2019-03-21</text>
+  </view>
+   <view class="main">
+    <image class="flag" src="../../img/flag_icon.png"></image>
+    <text class="title">先挣一个亿</text>
+    <text class="startTime">2018-12-11</text>
+    <text class="dao">到</text>
+    <text class="endTime">2019-03-21</text>
+  </view>
+   <view class="main">
+    <image class="flag" src="../../img/flag_icon.png"></image>
+    <text class="title">先挣一个亿</text>
+    <text class="startTime">2018-12-11</text>
+    <text class="dao">到</text>
+    <text class="endTime">2019-03-21</text>
+  </view>
+   <view class="main">
+    <image class="flag" src="../../img/flag_icon.png"></image>
+    <text class="title">先挣一个亿</text>
+    <text class="startTime">2018-12-11</text>
+    <text class="dao">到</text>
+    <text class="endTime">2019-03-21</text>
+  </view>
+   <view class="main">
+    <image class="flag" src="../../img/flag_icon.png"></image>
+    <text class="title">先挣一个亿</text>
+    <text class="startTime">2018-12-11</text>
+    <text class="dao">到</text>
+    <text class="endTime">2019-03-21</text>
+  </view>
 </view>
 
 

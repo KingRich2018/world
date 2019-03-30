@@ -7,7 +7,10 @@ Page({
   data: {
     startDates: "",
     endDates:"",
-    inputList:[1]
+    arr:[''],
+    value:"",
+    isgo:false,
+    disable:"disabled"
   },
 
   /**
@@ -20,9 +23,18 @@ Page({
     var month = myDate.getMonth() + 1;
     var day = myDate.getDate();
     var mAndD = that.issmall(month, day);
+    var flag = options.flag;
+   
+    var disable = ""
+    if (flag=='update'){
+      disable = "disable"
+    }else{
+      disable =""
+    }
     that.setData({
       startDates: year + "-" + mAndD,
-      endDates: year + "-" + mAndD
+      endDates: year + "-" + mAndD,
+      disable: disable
     })
   },
   //判断加0或者不加零
@@ -35,31 +47,65 @@ Page({
     }
     return month + "-" + day;
   },
+  
   addStep:function(e){
     var that =this
-    var id = e.currentTarget.dataset['id']+1;
-    var inputList = that.data.inputList.concat(id);
+    var id = e.currentTarget.dataset['id'];
+    var value = that.data.value;
+    that.data.arr[id] = "";
     that.setData({
-      inputList: inputList
+      isgo: false,
+      arr: that.data.arr
+      })
+  },
+  nofouce:function(e){
+    var that = this;
+    var value = e.detail.value;
+    var id = e.currentTarget.dataset['id'];
+    that.data.arr[id - 1] = value;
+    that.setData({
+      arr: that.data.arr
     })
   },
-  detStep:function(e){
-    var id = e.currentTarget.dataset['detid'];
-    console.log(id)
-    var that = this
-    var inputList = that.data.inputList;
-    console.log(inputList)
-    inputList.splice(id-1, 1)
-    console.log(inputList)
-    console.log("长" + inputList.length)
-    for (var i = id-1; i < inputList.length;i++){
-      inputList[i] = inputList[i]-1;
+  step:function(e){
+    var that = this;
+    var value = e.detail.value;
+    if (value){
+      that.setData({
+        isgo:true
+      })
+    } else {
+      that.setData({
+        isgo: false
+      })
     }
-    console.log(inputList)
+  },
+  detStep:function(e){
+    var that = this;
+    var id = e.currentTarget.dataset['detid'];
+    var value = that.data.value;
+    var isgo = true;
+    that.data.arr.splice(id - 1, 1);
+    if (that.data.arr.length == 0){
+      that.data.arr[0]="";
+    }
+    if (that.data.arr[that.data.arr.length - 1] == ""){
+      isgo = false;
+    }
     that.setData({
-      inputList: inputList
+      isgo: isgo,
+      arr: that.data.arr
     })
-
+  },
+ 
+  formSubmit:function(e){
+    var that = this
+    var title=e.detail.value.title;
+    var startTime = e.detail.value.startTime;
+    var endTime = e.detail.value.endTime;
+    var step = that.data.arr;
+    console.log(title + ">>>" + startTime + ">>>>>" + endTime + ">>>" + step)
+    
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -71,8 +117,8 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-
+  onShow: function (e) {
+    
   },
 
   /**

@@ -1,8 +1,8 @@
 {
   "pages": [
-    
-    
+    "pages/plan/plan",
     "pages/news/news",
+    "pages/plan/addPlan",
     "pages/find/foods",
     "pages/find/travel",
     "pages/read/read",
@@ -11,12 +11,12 @@
     "pages/find/main",
     "pages/find/today",
     "pages/index/index",
-    "pages/plan/plan",
+    
     "pages/express/express",
     "pages/read/one",
     "pages/find/tour",
-    "pages/find/food",
-    "pages/plan/addPlan"
+    "pages/find/food"
+    
   ],
   "permission": {
     "scope.userLocation": {
